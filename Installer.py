@@ -32,8 +32,8 @@ def main():
         print("Directory created!")
 
     print("Copying files...")
-    shutil.copyfile(f"{source}\\EDIT_Match_Scouting.xlsx", f"{desktop}\\Scouting\\EDIT_Match_Scouting.xlsx")
-    shutil.copyfile(f"{source}\\BLANK_Match_Scouting.xlsx", f"{desktop}\\Scouting\\BLANK_Match_Scouting.xlsx")
+    shutil.copyfile(f"{source}\\EDIT_Match_Scouting.xlsm", f"{desktop}\\Scouting\\EDIT_Match_Scouting.xlsm")
+    shutil.copyfile(f"{source}\\BLANK_Match_Scouting.xlsm", f"{desktop}\\Scouting\\BLANK_Match_Scouting.xlsm")
     print("Files copied!")
 
     print("Copying executable...")

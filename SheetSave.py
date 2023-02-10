@@ -61,7 +61,7 @@ def main():
     root.mainloop()
     
     # Open Excel 2016
-    os.system(f"\"{scouting}\\EDIT_Match_Scouting.xlsx\"")
+    os.system(f"\"{scouting}\\EDIT_Match_Scouting.xlsm\"")
 
 def filesave(team,match):
 
@@ -75,8 +75,8 @@ def filesave(team,match):
         print("Matches drive not found! Please insert the matches drive and try again. If the problem persists, please contact the Scouting Leads.")
         return
 
-    shutil.copyfile(f"{scouting}\\EDIT_Match_Scouting.xlsx", f"{matches}\\M{match}-T{team}-({datetime.now().strftime('%m-%d-%y')}).xlsx")
-    shutil.copyfile(f"{scouting}\\BLANK_Match_Scouting.xlsx", f"{scouting}\\EDIT_Match_Scouting.xlsx")
+    shutil.copyfile(f"{scouting}\\EDIT_Match_Scouting.xlsm", f"{matches}\\M{match}-T{team}-({datetime.now().strftime('%m-%d-%y')}).xlsm")
+    shutil.copyfile(f"{scouting}\\BLANK_Match_Scouting.xlsm", f"{scouting}\\EDIT_Match_Scouting.xlsm")
 
 class mainWindow(object):
     def __init__(self,master):
