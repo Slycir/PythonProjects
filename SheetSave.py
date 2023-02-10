@@ -1,6 +1,5 @@
 import os
 import shutil
-import threading
 from time import sleep
 from datetime import datetime
 from tkinter import *
@@ -35,7 +34,10 @@ def main():
         return
     
     # Focus Excel 2016
-    os.system(f"\"{source}\\EXCEL.EXE\"")
+    keyboard.press(Key.alt)
+    keyboard.press(Key.tab)
+    keyboard.release(Key.tab)
+    keyboard.release(Key.alt)
     sleep(.5)
 
     # Save file
@@ -43,7 +45,7 @@ def main():
     keyboard.press('s')
     keyboard.release('s')
     keyboard.release(Key.ctrl)
-    sleep(1)
+    sleep(1.5)
 
     # Close Excel 2016
     keyboard.press(Key.alt)
@@ -59,8 +61,7 @@ def main():
     root.mainloop()
     
     # Open Excel 2016
-    os.system(f"\"{source}\\EXCEL.EXE\" \"{scouting}\\EDIT_Match_Scouting.xlsx\"")
-    
+    os.system(f"\"{scouting}\\EDIT_Match_Scouting.xlsx\"")
 
 def filesave(team,match):
 
