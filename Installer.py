@@ -1,5 +1,6 @@
 import os
 import shutil
+from time import sleep
 
 def main():
     print("Installing Scouting Sheets...")
@@ -41,6 +42,7 @@ def main():
     print("Executable copied!")
 
     print("Installation complete!")
+    sleep(2)
 
 if __name__ == "__main__":
     main()

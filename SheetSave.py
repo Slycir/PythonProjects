@@ -29,6 +29,9 @@ def main():
         if(os.path.isdir(f"{drive}\\Program Files\\Microsoft Office\\root\\Office16") == True):
             source = f"{drive}\\Program Files\\Microsoft Office\\root\\Office16"
             break
+        elif(os.path.isdir(f"{drive}\\Program Files (x86)\\Microsoft Office\\Office16") == True):
+            source = f"{drive}\\Program Files (x86)\\Microsoft Office\\Office16"
+            break
     else:
         print("Excel 2016 not found!")
         return
