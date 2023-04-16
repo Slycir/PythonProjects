@@ -35,11 +35,14 @@ def main():
     print("Copying files...")
     shutil.copyfile(f"{source}\\EDIT_Match_Scouting.xlsm", f"{desktop}\\Scouting\\EDIT_Match_Scouting.xlsm")
     shutil.copyfile(f"{source}\\BLANK_Match_Scouting.xlsm", f"{desktop}\\Scouting\\BLANK_Match_Scouting.xlsm")
+    shutil.copyfile(f"{source}\\EDIT_Pit_Scouting.xlsm", f"{desktop}\\Scouting\\EDIT_Pit_Scouting.xlsm")
+    shutil.copyfile(f"{source}\\BLANK_Pit_Scouting.xlsm", f"{desktop}\\Scouting\\BLANK_Pit_Scouting.xlsm")
     print("Files copied!")
 
-    print("Copying executable...")
+    print("Copying executables...")
     shutil.copyfile(f"{source}\\SheetSave.exe", f"{desktop}\\SheetSave.exe")
-    print("Executable copied!")
+    shutil.copyfile(f"{source}\\PitSave.exe", f"{desktop}\\PitSave.exe")
+    print("Executables copied!")
 
     print("Installation complete!")
     sleep(2)
