@@ -36,15 +36,17 @@ def main():
     photoRange = list(range(int(photoRange[0]),int(photoRange[1])+1))
     photoRange = [str(i) for i in photoRange]
 
-    # Numbers at least 3 digits long
+    # Numbers at least 4 digits long
     for i in range(len(photoRange)):
         if len(photoRange[i]) == 1:
-            photoRange[i] = "00" + photoRange[i]
+            photoRange[i] = "000" + photoRange[i]
         elif len(photoRange[i]) == 2:
+            photoRange[i] = "00" + photoRange[i]
+        elif len(photoRange[i]) == 3:
             photoRange[i] = "0" + photoRange[i]
 
     # Set the URL
-    urlBase = f"https://www.teamphotonetwork.com/qpplus/handlers/hzp.ashx?o=27189418&r={cameraID}&f={photoTag}"
+    urlBase = f"https://www.teamphotonetwork.com/qpplus/handlers/hzp.ashx?o=27201051&r={cameraID}&f={photoTag}"
 
     # Download the photos
     for i in photoRange:
